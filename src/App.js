@@ -16,7 +16,7 @@ const App = () => {
       const formData = new FormData();
       formData.append("file", Image[0]);
       formData.append("key", Key);
-      const hit = await axios.post("http://18.209.179.39:2020/", formData);
+      const hit = await axios.post("http://100.25.220.74:2020/", formData);
       setIsLoading(false);
       setError(null)
       setResponse(hit.data.msg);
@@ -68,11 +68,11 @@ const App = () => {
           {IsLoading ? (
             <>
               <span
-                class="spinner-border spinner-border-sm"
+                className="spinner-border spinner-border-sm"
                 role="status"
                 aria-hidden="true"
               ></span>
-              <span class="visually-hidden ml-3">Loading...</span>
+              <span className="visually-hidden ml-3">Loading...</span>
             </>
           ) : (
             "Submit"
